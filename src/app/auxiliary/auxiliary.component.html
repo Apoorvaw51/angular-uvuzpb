@@ -1,0 +1,10 @@
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="auxiliary" *ngFor="let data of auxiliaryData">
+<h5>{{data.name}}</h5>
+</div> -->
+
+<mat-card *ngFor="let data of auxiliaryData">
+  <div class="auxiliary">
+    <mat-card-subtitle>{{data.name}}</mat-card-subtitle>
+  </div>
+</mat-card>

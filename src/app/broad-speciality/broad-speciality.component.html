@@ -1,0 +1,9 @@
+<!-- <div class = "broad"*ngFor="let data of broadData">
+<h5>{{data.name}}</h5>
+</div> -->
+
+<mat-card *ngFor="let data of broadData">
+  <div class="broad">
+    <mat-card-subtitle>{{data.name}}</mat-card-subtitle>
+  </div>
+</mat-card>

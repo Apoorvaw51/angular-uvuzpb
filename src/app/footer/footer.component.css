@@ -1,0 +1,38 @@
+.social {
+	transform: scale(0.8);
+	transition-duration: 0.5s;
+}
+
+.social:hover {
+	transform: rotate(180deg);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.fa-3x social {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.fa-facebook-square {
+	color: #3474eb;
+}
+
+.fa-twitter-square {
+	color: #34c0eb;
+}
+
+.fa-google-plus-square {
+	color: #eb3434;
+}
+
+.fa-linkedin {
+	color: #1921b3;
+}
+
+.fa-copyright{
+  margin-top:10px;
+  
+}

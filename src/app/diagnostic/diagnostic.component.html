@@ -1,0 +1,10 @@
+<!-- <div class="diagnostic" *ngFor=" let data of diagnosticData">
+<h5>{{data.name}}</h5>
+</div> -->
+
+
+<mat-card *ngFor="let data of diagnosticData">
+  <div class="diagnostic">
+    <mat-card-subtitle>{{data.name}}</mat-card-subtitle>
+  </div>
+</mat-card>

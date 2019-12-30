@@ -1,0 +1,17 @@
+<ul class="nav">
+  <li><a class="active" routerLink="/home">HOME</a></li>
+  <li><a routerLink="/overview">OVERVIEW</a></li>
+  <li><a routerLink="/specialities" >OUR SPECIALITIES</a></li>
+  <li><a routerLink="/contact" >CONTACT US</a></li>
+  <!-- <li><a routerLink="/login" >LOGIN</a></li> -->
+  <li><a routerLink="/register" >REGISTER</a></li>
+  <li><a routerLink="/patient" >PATIENT PORTAL</a></li>
+  <button  mat-flat-button color="accent" (click)="onBookBtnClick()">Book Appointment</button>
+</ul>
+<hr>
+
+<!-- <div class="bookBtn">
+  <button  mat-flat-button color="accent" (click)="onBookBtnClick()">Book Appointment</button></div> -->
+
+<router-outlet></router-outlet>
+

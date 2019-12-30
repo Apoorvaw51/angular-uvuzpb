@@ -1,0 +1,32 @@
+
+<form  #contactForm="ngForm" class="form" *ngIf="!isSubmitted">
+
+  <mat-form-field>
+    <input matInput #userName [(ngModel)]="name" name="name"
+    placeholder='Please enter your name' required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput #userNumber [(ngModel)]="number" name="number"
+    placeholder='Please enter your number' required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput #userEmail [(ngModel)]="email" name="email"
+    placeholder='Please enter your email' email required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput #userMessage [(ngModel)]="message" name="message"
+    placeholder='Please enter your message' required>
+  </mat-form-field>
+
+<button mat-stroked-button 
+(click)="onSubmit(); contactForm.reset()"
+color="primary" [disabled]="!contactForm.valid">Send</button>
+</form>
+  <h1 *ngIf="isSubmitted">Your message has been sent!</h1>
+
+<p>You can also call our front desk at +91 8888808845 or Email us at <a routerLink="">appointment@careandcure.org</a> </p>
+
+<app-footer></app-footer>

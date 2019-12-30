@@ -1,0 +1,24 @@
+
+<form  #loginForm="ngForm" class="form" *ngIf="!isSubmitted">
+
+  <mat-form-field>
+    <input matInput #userName [(ngModel)]="name" name="name"
+    placeholder='Please enter your name' required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput #userPassword [(ngModel)]="password" name="password"
+    placeholder='Please enter your password' required>
+  </mat-form-field>
+
+  
+<button mat-stroked-button 
+(click)="onLogin(); loginForm.reset()"
+color="primary" [disabled]="!loginForm.valid">Login</button>
+</form>
+  <h2 *ngIf="isSubmitted">You have logged in successfully!</h2>
+
+
+
+
+

@@ -1,0 +1,45 @@
+
+
+<form ngForm #appointmentForm="ngForm" class="form" *ngIf="!isSubmitted">
+
+  <mat-form-field>
+    <input matInput #userName name="name"
+    placeholder='Please enter your name' required ngModel #name="ngModel">
+  </mat-form-field>
+ 
+
+  <mat-form-field>
+    <input matInput #userNumber  name="number"
+    placeholder='Please enter your contact number' required ngModel #number="ngModel" >
+  </mat-form-field>
+   
+
+  <mat-form-field>
+    <input matInput #userEmail [(ngModel)]="email" name="email"
+    placeholder='Please enter your email'>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput 
+    [matDatepicker]="picker" name="appointmentDate"
+     placeholder="Please enter appointment date" required ngModel #appointmentDate="ngModel">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <span class="help-block" *ngIf = "!number.valid && number.touched"> This field is required</span>
+
+
+  <mat-form-field>
+    <input matInput #userMessage [(ngModel)]="message" name="message"
+    placeholder='Please enter your message'>
+  </mat-form-field>
+
+
+<button mat-stroked-button 
+(click)="onSubmit(); appointmentForm.reset()"
+color="primary" [disabled]="!appointmentForm.valid">Confirm Appointment</button>
+</form>
+
+
+<h3 *ngIf="isSubmitted">Your appointment has been confirmed!</h3>
+<app-footer></app-footer>
